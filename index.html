@@ -1,10 +1,154 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>This is my website</title>
+        <title>CSCI225 Homepage of Emma Kramer</title>
     </head>
 
     <body>
-        <p>This is the body of the page</p>
+        <div class="navbar">
+        <!--Put the list in this section-->
+        <ul>
+            <li><a href="https://www.usca.edu/">USCA</a></li>
+            <li><a href="#Assignment">Assignment</a></li>
+            <li><a href="#Contact Information">Contact Information</a></li>
+            <li><a href="https://www.google.com">Google</a></li>
+            <li><a href="https://blackboard.sc.edu">Blackboard</a></li>
+        </ul>
+        </div>
+        <hr>
+
+        <div class="introduction">
+            <h1><u>Introduction</u></h1>
+            <p>
+                This is the introduction section of my webpage. 
+                This is where you find information about my webpage. 
+                There are several links at the top of the page that will help you to navigate the page. 
+                Thanks for reading!
+            </p>
+            <hr>
+            <img src="img/dog.png" alt="puppy">
+            <hr>
+        </div>
+
+        <div id="Assignment">
+            <h1>Assignment</h1>
+            <ol>
+                <li><a href="doc/Assignment1.pdf">Link to Assignment1</a></li>
+                <li>Install browsers</li>
+                <li>Create folders</li>
+                <li>Create the HTML document</li>
+                <li>Check the checklist</li>
+                <li>Validate the file</li>
+                <li>Upload to GitHub</li>
+                <li>Test your submission</li>
+            </ol>
+            <hr>
+        </div class="Portfolio">
+            <h1>Portfolio</h1>
+            <p>
+                <ul>
+                    <li>Calculator</li>
+                        <ul>
+                            <li>Basic calulator asking user to input numbers to add, subtract, multiply, or divide</li>
+                            <li>Skills used: Java</li>
+                        </ul>
+                    <li>RPG game</li>
+                        <ul>
+                            <li>Interative game that guides user through maze</li>
+                            <li>Skills used: Python</li>
+                        </ul>
+                    <li>Personal webpage</li>
+                        <ul>
+                            <li>Personal webpage with links and images</li>
+                            <li>Skills used: HTML, CSS</li>
+                        </ul>
+                </ul>
+            </p>
+            <hr>
+
+            <address id="Contact Information">
+                <h1><b>Contact Information</b></h1>
+                <p>
+                    Emma Kramer<br>
+                    471 University Parkway<br>
+                    Aiken, SC 29801<br>
+                    student@usca.edu<br>
+                    (111)222-3333<br>
+                </p>
+             
+            <hr>
+            </address>
+
+            <div class="schedule">
+                <h1>Schedule</h1>
+                <table border="1">
+                    <tr>
+                        <th><b><i>Time</i></b></th>
+                        <th><b><i>Monday</i></b></th>
+                        <th><b><i>Tuesday</i></b></th>
+                        <th><b><i>Wednesday</i></b></th>
+                        <th><b><i>Thursday</i></b></th>
+                        <th><b><i>Friday</i></b></th>
+                    </tr>
+                    <tr>
+                        <td>8:00-9:00</td>
+                        <td rowspan="2" bgcolor="red">Math 174</td>
+                        <td rowspan="2" bgcolor="green">CSCI225</td>
+                        <td rowspan="2" bgcolor="red">Math 174</td>
+                        <td rowspan="2" bgcolor="green">CSCI225</td>
+                        <td></td>
+
+                    </tr>
+                    <tr>
+                        <td>9:00-10:00</td>
+                        <td></td>
+
+                    </tr>
+                    <tr>
+                        <td>10:00-11:00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>11:00-12:00</td>
+                        <td></td>
+                        <td rowspan="3" bgcolor="olive">CSCI146</td>
+                        <td></td>
+                        <td rowspan="3" bgcolor="olive">CSCI146</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>12:00-1:00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>1:00-2:00</td>
+                        <td rowspan="2" bgcolor="Yellow">BIO104</td>
+                        <td rowspan="2" bgcolor="Yellow">BIO104</td>
+                        <td rowspan="2" bgcolor="Yellow">BIO104</td>
+                    </tr>
+                    <tr>
+                        <td>2:00-3:00</td>
+
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                       
+
+                      
+
+                </table>
+            </div>
+            <hr>
+            <footer>
+                <p>&copy; 2024 Emma Kramer. All rights reserved.</p>
+            </footer>
+
     </body>
 </html>
