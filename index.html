@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>CSCI225 Homepage of Emma Kramer</title>
+        <link rel="stylesheet" href="css/home.css">
     </head>
 
     <body>
@@ -27,8 +28,12 @@
                 Thanks for reading!
             </p>
             <hr>
-            <img src="img/dog.png" width="350" height="300" alt="puppy">
-            <iframe width="350" height="300" src="https://www.youtube.com/embed/JJVFSWHZYjY?si=IUsbOFXP5ggBTaDc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <img src="img/dog.png" width="350" height="300" alt="Image of a puppy">
+            <iframe width="350" height="300" src="https://www.youtube.com/embed/JJVFSWHZYjY?si=IUsbOFXP5ggBTaDc" 
+                    title="YouTube video player" style="border: 0;" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
             <hr>
         </div>
 
@@ -48,116 +53,104 @@
             <a href="ContactMe.html">Contact Me</a>
             <hr>
         </div>
+
         <div class="Portfolio">
             <h1>Portfolio</h1>
-            <p>
+            <ul>
+                <li>Calculator</li>
                 <ul>
-                    <li>Calculator</li>
-                        <ul>
-                            <li>Basic calulator asking user to input numbers to add, subtract, multiply, or divide</li>
-                            <li>Skills used: Java</li>
-                        </ul>
-                    <li>RPG game</li>
-                        <ul>
-                            <li>Interative game that guides user through maze</li>
-                            <li>Skills used: Python</li>
-                        </ul>
-                    <li>Personal webpage</li>
-                        <ul>
-                            <li>Personal webpage with links and images</li>
-                            <li>Skills used: HTML, CSS</li>
-                        </ul>
+                    <li>Basic calculator asking user to input numbers to add, subtract, multiply, or divide</li>
+                    <li>Skills used: Java</li>
                 </ul>
-            </p>
+                <li>RPG game</li>
+                <ul>
+                    <li>Interactive game that guides user through maze</li>
+                    <li>Skills used: Python</li>
+                </ul>
+                <li>Personal webpage</li>
+                <ul>
+                    <li>Personal webpage with links and images</li>
+                    <li>Skills used: HTML, CSS</li>
+                </ul>
+            </ul>
             <hr>
         </div>
 
-            <address id="Contact Information">
-                <h1><b>Contact Information</b></h1>
-                <p>
-                    Emma Kramer<br>
-                    471 University Parkway<br>
-                    Aiken, SC 29801<br>
-                    student@usca.edu<br>
-                    (111)222-3333<br>
-                </p>
-             
+        <address id="ContactInformation">
+            <h1><b>Contact Information</b></h1>
+            <p>
+                Emma Kramer<br>
+                471 University Parkway<br>
+                Aiken, SC 29801<br>
+                student@usca.edu<br>
+                (111)222-3333<br>
+            </p>
             <hr>
-            </address>
+        </address>
 
-            <div class="schedule">
-                <h1>Schedule</h1>
-                <table border="1">
-                    <tr>
-                        <th bgcolor="tan"><b><i>Time</i></b></th>
-                        <th bgcolor="tan"><b><i>Monday</i></b></th>
-                        <th bgcolor="tan"><b><i>Tuesday</i></b></th>
-                        <th bgcolor="tan"><b><i>Wednesday</i></b></th>
-                        <th bgcolor="tan"><b><i>Thursday</i></b></th>
-                        <th bgcolor="tan"><b><i>Friday</i></b></th>
-                    </tr>
-                    <tr>
-                        <td>8:00-9:00</td>
-                        <td rowspan="2" bgcolor="plum">Math 174</td>
-                        <td rowspan="2" bgcolor="skyblue">CSCI225</td>
-                        <td rowspan="2" bgcolor="plum">Math 174</td>
-                        <td rowspan="2" bgcolor="skyblue">CSCI225</td>
-                        <td></td>
+        <div class="schedule">
+            <h1>Schedule</h1>
+            <table border="1">
+                <tr>
+                    <th bgcolor="tan"><b><i>Time</i></b></th>
+                    <th bgcolor="tan"><b><i>Monday</i></b></th>
+                    <th bgcolor="tan"><b><i>Tuesday</i></b></th>
+                    <th bgcolor="tan"><b><i>Wednesday</i></b></th>
+                    <th bgcolor="tan"><b><i>Thursday</i></b></th>
+                    <th bgcolor="tan"><b><i>Friday</i></b></th>
+                </tr>
+                <tr>
+                    <td>8:00-9:00</td>
+                    <td rowspan="2" bgcolor="plum">Math 174</td>
+                    <td rowspan="2" bgcolor="skyblue">CSCI225</td>
+                    <td rowspan="2" bgcolor="plum">Math 174</td>
+                    <td rowspan="2" bgcolor="skyblue">CSCI225</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>9:00-10:00</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>10:00-11:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>11:00-12:00</td>
+                    <td></td>
+                    <td rowspan="3" bgcolor="olive">CSCI146</td>
+                    <td></td>
+                    <td rowspan="3" bgcolor="olive">CSCI146</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>12:00-1:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>1:00-2:00</td>
+                    <td rowspan="2" bgcolor="Pink">BIO104</td>
+                    <td rowspan="2" bgcolor="Pink">BIO104</td>
+                    <td rowspan="2" bgcolor="Pink">BIO104</td>
+                </tr>
+                <tr>
+                    <td>2:00-3:00</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
 
-                    </tr>
-                    <tr>
-                        <td>9:00-10:00</td>
-                        <td></td>
-
-                    </tr>
-                    <tr>
-                        <td>10:00-11:00</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>11:00-12:00</td>
-                        <td></td>
-                        <td rowspan="3" bgcolor="olive">CSCI146</td>
-                        <td></td>
-                        <td rowspan="3" bgcolor="olive">CSCI146</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>12:00-1:00</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>1:00-2:00</td>
-                        <td rowspan="2" bgcolor="Pink">BIO104</td>
-                        <td rowspan="2" bgcolor="Pink">BIO104</td>
-                        <td rowspan="2" bgcolor="Pink">BIO104</td>
-                    </tr>
-                    <tr>
-                        <td>2:00-3:00</td>
-
-                        <td></td>
-                        <td></td>
-                    </tr>
-
-                       
-
-                      
-
-                </table>
-            </div>
-            <hr>
-           
-
-        
-            <footer>
-                <p>&copy; 2024 Emma Kramer. All rights reserved.</p>
-            </footer>
+        <footer>
+            <p>&copy; 2024 Emma Kramer. All rights reserved.</p>
+        </footer>
 
     </body>
 </html>
