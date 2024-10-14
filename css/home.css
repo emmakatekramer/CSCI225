@@ -1,0 +1,156 @@
+/*
+====================================
+001 variables
+002 colors
+003 typography
+004 layout
+====================================
+*/
+
+/* 001 variables */
+:root {
+    /* colors */
+    --text-color: rgb(255, 255, 255);
+    --header-color: rgb(53, 0, 17);
+    --intro-color: rgba(98, 0, 31, 0.514);
+    --table-header-color: rgb(163, 0, 52);
+
+    /* font */
+    --font-family: 'Arial', sans-serif;
+
+    /* font-size */
+    --font-size-base: 16px;
+    --font-size-large: 1.5em;
+    --font-size-medium: 1.2em;
+
+    /* layout variables */
+    --navbar-height: 50px;
+    --footer-height: 40px;
+}
+
+/* 002 colors */
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    background-image: url(../img/bg-img.jpg);
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+}
+
+h1, h3 {
+    color: var(--text-color);
+}
+
+th {
+    background-color: var(--table-header-color);
+}
+
+/* 003 typography */
+p {
+    margin: 0 0 1em;
+}
+
+/* 004 layout */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* ensures body takes at least full viewport height */
+}
+
+#hp{
+    text-align: left;
+}
+
+div.navbar, footer {
+    position: fixed;
+    background-color: var(--header-color);
+    color: var(--text-color);
+    padding: 10px;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+div.navbar {
+    top: 0;
+    height: var(--navbar-height);
+}
+
+footer {
+    bottom: 0;
+    height: var(--footer-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex; /* use flexbox for layout */
+    margin-top: var(--navbar-height);
+    margin-bottom: var(--footer-height);
+    flex: 1; /* allows the container to grow and fill available space */
+}
+
+div.introduction {
+    flex: 1; /* allows this section to grow */
+    background-color: var(--intro-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin-right: 20px; /* spacing between introduction and right sections */
+}
+
+.sidebar {
+    width: 300px; /* fixed width for sidebar */
+    margin-left: 20px; /* spacing between left and right */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    height: 80vh; /* fixed height for sidebar */
+    overflow-y: auto; /* allows scrolling */
+}
+
+.Assignments, .Portfolio {
+    margin-bottom: 20px; /* spacing between sections */
+}
+
+h1 {
+    font-size: var(--font-size-large);
+    margin-bottom: 1em;
+}
+
+ul {
+    list-style-type: none; /* removes bullets */
+    padding: 0; /* removes padding */
+}
+
+ul li {
+    margin-bottom: 0.5em; /* spacing between items */
+}
+
+img, iframe {
+    display: block; /* centers images and iframes */
+    margin: 10px auto; /* centers and adds spacing */
+    border: 2px solid var(--text-color); /* border for emphasis */
+}
+
+table {
+    width: 100%; /* makes the table responsive */
+    border-collapse: collapse; /* removes space between borders */
+}
+
+table th, table td {
+    padding: 10px; /* adds padding for cell content */
+    text-align: center; /* centers text */
+}
+
+address {
+    margin: 0; /* removes default margin */
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1); /* background for emphasis */
+    border-radius: 10px; /* rounded corners */
+}
