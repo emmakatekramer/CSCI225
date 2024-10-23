@@ -5,28 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSCI225 Homepage of Emma Kramer</title>
     <link rel="stylesheet" href="css/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
+    <!-- Video background -->
+    <video autoplay muted loop id="myVideo">
+        <source src="img/starrynight.mp4" type="video/mp4">
+    </video>
+
+
+    <!-- Title bar -->
+    <div class="title-bar">
+        <h1>Emma's Homepage</h1>
+    </div>
+
+    <!-- Navigation bar -->
     <div class="navbar">
-        <p id="hp">CSCI225 Homepage of Emma Kramer</p>
         <a href="https://www.usca.edu/">USCA</a>
-        <a href="#Assignments">Assignments</a>
-        <a href="#ContactInformation">Contact Information</a>
-        <a href="https://github.com/emmakatekramer">GitHub</a>
-        <a href="https://blackboard.sc.edu">Blackboard</a>
+        <a href="#Assignments">ASSIGNMENTS</a>
+        <a href="ContactMe.html">CONTACT INFORMATION</a>
+        <a href="https://github.com/emmakatekramer">GITHUB</a>
+        <a href="https://blackboard.sc.edu">BLACKBOARD</a>
     </div>
 
     <div class="container"> <!-- Container for layout -->
         <div class="introduction">
-            <h3 id="intro">Introduction</h3>
+            <h1 id="intro">Introduction</h1>
             <p>
                 Welcome to my webpage! I'm Emma Kramer, a sophomore computer science student at University of South Carolina Aiken.
                 I aspire to become a software engineer. This semester I am learning web development and algorithmic design with Java.
                 This webpage contains information on my assignments, portfolio, class schedule, and contact information. 
                 Feel free to explore and contact me with any questions. Enjoy!
             </p>
-            <img id="pic" src="img/tech.png" width="350" height="300" alt="tech">
+            <img id="pic" src="img/computer.png" width="800" height="300" alt="tech">
         </div>
 
         <div class="sidebar"> <!-- Sidebar for Assignments and Portfolio -->
@@ -43,19 +56,20 @@
             <div class="Portfolio">
                 <h1>Portfolio</h1>
                 <ul>
-                    <li>Calculator
+                    
+                    <li><b>Calculator</b>
                         <ul>
                             <li>Basic calculator asking user to input numbers to add, subtract, multiply, or divide</li>
                             <li>Skills used: Java</li>
                         </ul>
                     </li>
-                    <li>RPG game
+                    <li><b>RPG game</b>
                         <ul>
                             <li>Interactive game that guides user through a maze</li>
                             <li>Skills used: Python</li>
                         </ul>
                     </li>
-                    <li>Personal webpage
+                    <li><b>Personal webpage</b>
                         <ul>
                             <li>Personal webpage with links and images</li>
                             <li>Skills used: HTML, CSS</li>
@@ -66,19 +80,22 @@
             </div>
         </div> <!-- End of sidebar -->
     </div> <!-- End of container -->
+
+
+    <!-- Class schedule -->
     <div class="schedule">
-        <h1>Schedule</h1>
+        <h1>Class Schedule</h1>
         <table border="1">
             <tr>
-                <th><b><i>Time</i></b></th>
-                <th><b><i>Monday</i></b></th>
-                <th><b><i>Tuesday</i></b></th>
-                <th><b><i>Wednesday</i></b></th>
-                <th><b><i>Thursday</i></b></th>
-                <th><b><i>Friday</i></b></th>
+                <th><b>Time</b></th>
+                <th><b>Monday</b></th>
+                <th><b>Tuesday</b></th>
+                <th><b>Wednesday</b></th>
+                <th><b>Thursday</b></th>
+                <th><b>Friday</b></th>
             </tr>
             <tr>
-                <td>8:00-9:00</td>
+                <td bgcolor="midnightblue">8:00-9:00</td>
                 <td rowspan="2" bgcolor="plum">Math 174</td>
                 <td rowspan="2" bgcolor="skyblue">CSCI225</td>
                 <td rowspan="2" bgcolor="plum">Math 174</td>
@@ -86,11 +103,11 @@
                 <td></td>
             </tr>
             <tr>
-                <td>9:00-10:00</td>
+                <td bgcolor="midnightblue">9:00-10:00</td>
                 <td></td>
             </tr>
             <tr>
-                <td>10:00-11:00</td>
+                <td bgcolor="midnightblue">10:00-11:00</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -98,7 +115,7 @@
                 <td></td>
             </tr>
             <tr>
-                <td>11:00-12:00</td>
+                <td bgcolor="midnightblue">11:00-12:00</td>
                 <td></td>
                 <td rowspan="3" bgcolor="olive">CSCI146</td>
                 <td></td>
@@ -106,27 +123,29 @@
                 <td></td>
             </tr>
             <tr>
-                <td>12:00-1:00</td>
+                <td bgcolor="midnightblue">12:00-1:00</td>
                 <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
-                <td>1:00-2:00</td>
+                <td bgcolor="midnightblue">1:00-2:00</td>
                 <td rowspan="2" bgcolor="Pink">BIO104</td>
                 <td rowspan="2" bgcolor="Pink">BIO104</td>
                 <td rowspan="2" bgcolor="Pink">BIO104</td>
             </tr>
             <tr>
-                <td>2:00-3:00</td>
+                <td bgcolor="midnightblue">2:00-3:00</td>
                 <td></td>
                 <td></td>
             </tr>
         </table>
     </div>
 
-    <h1><b>Contact Information</b></h1>
+    <!-- Contact information -->
+    
     <address id="ContactInformation">
+        <h1><b>Contact Information</b></h1>
         <p>
             Emma Kramer<br>
             471 University Parkway<br>
@@ -135,9 +154,12 @@
             (111)222-3333<br>
         </p>
     </address>
-    <hr>
+    <br>
+    <br>
+    <br>
 
 
+        <!-- Footer -->
         <footer>
             <p>&copy; 2024 Emma Kramer. All rights reserved.</p>
         </footer>
