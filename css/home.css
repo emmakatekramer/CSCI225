@@ -23,7 +23,8 @@
 
     /* font */
     --font-family: 'Arial', sans-serif;
-
+    --custom-font: 'Concert One', sans-serif;
+ 
     /* font-size */
     --font-size-base: 16px;
     --font-size-large: 1.5em;
@@ -57,6 +58,13 @@ a:hover {
 /* ================================
    003 Typography 
    ================================ */
+
+div.title-bar h1 {
+    font-family: var(--custom-font);
+    font-size: 1.8em;
+}
+
+
 h1, h3 {
     color: var(--text-color);
 }
@@ -101,7 +109,7 @@ th {
    004 Layout 
    ================================ */
 div.navbar {
-    margin-top: 50px;
+    margin-top: 65px;
     height: var(--navbar-height);
 }
 
@@ -153,7 +161,7 @@ footer {
 /* ================================
    005 Components 
    ================================ */
-div.introduction {
+div.introduction{
     margin-left: 25px;
     flex: 1;
     background-color: var(--intro-color);
@@ -205,12 +213,17 @@ img, iframe {
     z-index: -1;
 }
 
+
+
 #pic {
     position: absolute;
     border: 2px solid var(--header-color);
     margin-left: -6px;
     z-index: 1;
+    flex-wrap: auto;
 }
+
+
 
 table {
     width: 100%;
