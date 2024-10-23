@@ -1,14 +1,18 @@
 /*
 ====================================
-001 variables
-002 colors
-003 typography
-004 layout
+001 Variables
+002 Base Styles
+003 Typography
+004 Layout
+005 Components
+006 Transitions & Effects
 ====================================
 */
 
-/* 001 variables */
-:root {
+/* ================================
+   001 Variables 
+   ================================ */
+   :root {
     /* colors */
     --text-color: rgb(255, 255, 255);
     --text-color-2: rgb(206, 192, 255);
@@ -30,7 +34,9 @@
     --footer-height: 15px;
 }
 
-/* 002 colors */
+/* ================================
+   002 Base Styles
+   ================================ */
 body {
     font-family: var(--font-family);
     font-size: var(--font-size-base);
@@ -38,24 +44,29 @@ body {
     margin: 0;
     padding: 0;
     color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+a:hover { 
+    text-decoration: underline; 
+    font-size: 18px;
+}
+
+/* ================================
+   003 Typography 
+   ================================ */
 h1, h3 {
     color: var(--text-color);
 }
 
-th {
-    background-color: var(--table-header-color);
+h1 {
+    font-size: var(--font-size-large);
+    margin-bottom: 1em;
+    text-transform: uppercase; 
+    letter-spacing: 2px;
 }
-
-/* 003 typography */
-
-a:hover { 
-
-    text-decoration: underline; 
-    font-size: 18px;
-
-} 
 
 p {
     margin: 0 0 1em;
@@ -65,12 +76,6 @@ p {
 
 p::first-letter {
     font-size: 1.5rem;
-
-  }
-
-h1 {
-    font-size: var(--font-size-large);
-    margin-bottom: 1em;
 }
 
 ul {
@@ -85,38 +90,26 @@ ul li {
 li {
     color: var(--text-color);
     font-weight: 100;
+    list-style-image: url(..img/star.gif);
 }
 
-h1 { 
-    text-transform: uppercase; 
-    letter-spacing: 2px;
+th {
+    background-color: var(--table-header-color);
 }
 
-/* 004 layout */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; 
-}
-
-#myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    width: 1700px;
-    z-index: -1;
-}
-
-#hp {
-    text-align: left;
-}
-
-
-
-
+/* ================================
+   004 Layout 
+   ================================ */
 div.navbar {
-    margin-top: 75px;
+    margin-top: 50px;
     height: var(--navbar-height);
+}
+
+div.navbar a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 35px;
 }
 
 div.navbar, footer {
@@ -130,13 +123,6 @@ div.navbar, footer {
     z-index: 1000;
 }
 
-div.navbar a {
-    color: var(--text-color);
-    text-decoration: none;
-    margin: 0 65px;
-    font-size: 12px;
-}
-
 .title-bar {
     top: 0;
     display: flex;
@@ -146,17 +132,8 @@ div.navbar a {
     position: fixed;
     min-width: 100%;
     z-index: 10;
+    padding-left: 25px;
 }
-
-div.title-bar h1 {
-    margin-left: 20px;
-    font-family:"Concert One", sans-serif;
-    font-weight: 400;
-    font-size: 2em;
-    font-style: normal;
-}
-
-
 
 footer {
     bottom: 0;
@@ -173,7 +150,11 @@ footer {
     flex: 1;
 }
 
+/* ================================
+   005 Components 
+   ================================ */
 div.introduction {
+    margin-left: 25px;
     flex: 1;
     background-color: var(--intro-color);
     margin-top: 130px;
@@ -187,18 +168,9 @@ div.introduction p {
     font-size: var(--font-size-medium);
 }
 
-#pic {
-    position: absolute;
-    align-items: center; 
-    margin: 10px;
-    border: 2px solid var(--header-color);
-    z-index: 1;
-
-}
-
-
 .sidebar {
     margin-top: 130px;
+    margin-right: 25px;
     width: 300px;
     margin-left: 20px;
     padding: 20px;
@@ -224,6 +196,22 @@ img, iframe {
     border: 2px solid var(--text-color);
 }
 
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+#pic {
+    position: absolute;
+    border: 2px solid var(--header-color);
+    margin-left: -6px;
+    z-index: 1;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -244,14 +232,21 @@ address, .schedule {
     border-radius: 10px;
 }
 
-
-/* h1 transition */
+/* ================================
+   006 Transitions & Effects 
+   ================================ */
 h1 {
     transition: transform 0.3s ease, color 0.3s ease; 
 }
 
-/* h1 hover transform */
 h1:hover {
     transform: scale(1.1);
     color: var(--text-color-2);
+}
+
+
+/*border*/
+ #ContactInformation, .schedule{
+    border-right: 3px solid  rgba(57, 52, 52, 0.6);
+    border-bottom: 3px solid rgba(57, 52, 52, 0.6);
 }
