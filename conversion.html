@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Length Conversion Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .converter {
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 8px;
+            background-color: #f5f5f5;
+            width: 300px;
+            text-align: center;
+        }
+        .converter input, .converter select, .converter button {
+            margin: 10px 0;
+            width: 100%;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="converter">
+        <h2>Length Conversion Calculator</h2>
+        <label for="inputValue">Input Value:</label>
+        <input type="number" id="inputValue" placeholder="Enter a value" required>
+        
+        <label for="inputUnit">From:</label>
+        <select id="inputUnit">
+            <option value="foot">Foot</option>
+            <option value="inch">Inch</option>
+            <option value="meter">Meter</option>
+        </select>
+        
+        <label for="outputUnit">To:</label>
+        <select id="outputUnit">
+            <option value="foot">Foot</option>
+            <option value="inch">Inch</option>
+            <option value="meter">Meter</option>
+        </select>
+        
+        <label for="outputValue">Converted Value:</label>
+        <input type="text" id="outputValue" readonly>
+        
+        <button onclick="convert()">Convert</button>
+    </div>
+
+    <script>
+        function convert() {
+            const inputValue = parseFloat(document.getElementById("inputValue").value);
+            const inputUnit = document.getElementById("inputUnit").value;
+            const outputUnit = document.getElementById("outputUnit").value;
+            let convertedValue;
+
+            if (isNaN(inputValue)) {
+                alert("Please enter a valid number.");
+                return;
+            }
+
+            if (inputUnit === "foot" && outputUnit === "inch") {
+                convertedValue = inputValue * 12;
+            } else if (inputUnit === "foot" && outputUnit === "meter") {
+                convertedValue = inputValue * 0.3048;
+            } else if (inputUnit === "inch" && outputUnit === "foot") {
+                convertedValue = inputValue / 12;
+            } else if (inputUnit === "inch" && outputUnit === "meter") {
+                convertedValue = inputValue * 0.0254;
+            } else if (inputUnit === "meter" && outputUnit === "foot") {
+                convertedValue = inputValue / 0.3048;
+            } else if (inputUnit === "meter" && outputUnit === "inch") {
+                convertedValue = inputValue / 0.0254;
+            } else {
+                convertedValue = inputValue;
+            }
+
+            document.getElementById("outputValue").value = convertedValue.toFixed(4);
+        }
+    </script>
+</body>
+</html>
