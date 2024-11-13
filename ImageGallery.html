@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Gallery</title>
+    <style>
+        .gallery-container {
+            position: relative;
+            width: 80%;
+            margin: auto;
+        }
+        .gallery-img {
+            display: none;
+            width: 100%;
+        }
+        .active {
+            display: block;
+        }
+        .navigation {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .gallery-container:hover .navigation {
+            opacity: 1;
+        }
+        .dot-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .dot {
+            cursor: pointer;
+            height: 10px;
+            width: 10px;
+            margin: 0 2px;
+            background-color: gray;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .active-dot {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Gallery</h1>
+    <div class="gallery-container">
+        <img src="img1.jpg" class="gallery-img active" alt="Image 1 Description">
+        <img src="img2.jpg" class="gallery-img" alt="Image 2 Description">
+        <img src="img3.jpg" class="gallery-img" alt="Image 3 Description">
+        <img src="img4.jpg" class="gallery-img" alt="Image 4 Description">
+        <img src="img5.jpg" class="gallery-img" alt="Image 5 Description">
+
+        <div class="navigation">
+            <button id="prev">❮</button>
+            <button id="next">❯</button>
+        </div>
+
+        <div class="dot-container">
+            <span class="dot active-dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <script src="ImageGallery.js"></script>
+</body>
+</html>
