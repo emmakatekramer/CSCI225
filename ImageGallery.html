@@ -2,36 +2,72 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Gallery</title>
     <style>
+        /* --- Gallery Container --- */
         .gallery-container {
             position: relative;
             width: 80%;
             margin: auto;
+            overflow: hidden;
         }
+
+        /* --- Image Styles --- */
         .gallery-img {
             display: none;
             width: 100%;
         }
-        .active {
+
+        .gallery-img.active {
             display: block;
         }
+
+        /* --- Description Styles --- */
+        .description {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        /* --- Navigation Arrows --- */
         .navigation {
             position: absolute;
-            top: 50%;
-            width: 100%;
+            top: 0;
+            bottom: 0;
             display: flex;
             justify-content: space-between;
-            opacity: 0;
-            transition: opacity 0.3s;
+            width: 100%;
+            pointer-events: none;
         }
-        .gallery-container:hover .navigation {
-            opacity: 1;
+
+        .navigation button {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 10px 15px;
+            visibility: hidden;
+            pointer-events: auto;
+            transition: opacity 0.3s ease, transform 0.2s ease;
         }
+
+        .gallery-container:hover .navigation button {
+            visibility: visible;
+        }
+
+        .navigation button:hover {
+            transform: scale(1.1);
+        }
+
+        /* --- Navigation Dots --- */
         .dot-container {
             text-align: center;
             margin-top: 10px;
         }
+
         .dot {
             cursor: pointer;
             height: 10px;
@@ -40,7 +76,9 @@
             background-color: gray;
             border-radius: 50%;
             display: inline-block;
+            transition: background-color 0.3s;
         }
+
         .active-dot {
             background-color: black;
         }
@@ -49,17 +87,22 @@
 <body>
     <h1>Image Gallery</h1>
     <div class="gallery-container">
-        <img src="img/img1.jpg" class="gallery-img active" alt="Planet">
-        <img src="img/img2.jpg" class="gallery-img" alt="Solar System">
-        <img src="img/img3.jpg" class="gallery-img" alt="Galaxy">
-        <img src="img/img4.jpg" class="gallery-img" alt="Sun">
-        <img src="img/img5.jpg" class="gallery-img" alt="Rocket Ship">
+        <img src="img/img1.jpg" class="gallery-img active" alt="Planet" data-desc="Planet: A celestial body in space.">
+        <img src="img/img2.jpg" class="gallery-img" alt="Solar System" data-desc="Solar System: Our home system of planets.">
+        <img src="img/img3.jpg" class="gallery-img" alt="Galaxy" data-desc="Galaxy: A massive collection of stars.">
+        <img src="img/img4.jpg" class="gallery-img" alt="Sun" data-desc="Sun: The center of our solar system.">
+        <img src="img/img5.jpg" class="gallery-img" alt="Rocket Ship" data-desc="Rocket Ship: Space exploration vessel.">
 
+        <!-- Navigation Arrows -->
         <div class="navigation">
             <button id="prev">❮</button>
             <button id="next">❯</button>
         </div>
 
+        <!-- Description -->
+        <p class="description">Planet: A celestial body in space.</p>
+
+        <!-- Navigation Dots -->
         <div class="dot-container">
             <span class="dot active-dot"></span>
             <span class="dot"></span>
@@ -69,6 +112,33 @@
         </div>
     </div>
 
-    <script src="ImageGallery.js"></script>
+    <script>
+        // Variables for images, dots, and description
+        let currentIndex = 0;
+        const images = document.querySelectorAll(".gallery-img");
+        const dots = document.querySelectorAll(".dot");
+        const description = document.querySelector(".description");
+
+        // Navigation arrows
+        document.getElementById("next").addEventListener("click", () => showImage(currentIndex + 1));
+        document.getElementById("prev").addEventListener("click", () => showImage(currentIndex - 1));
+
+        // Dot navigation
+        dots.forEach((dot, index) => {
+            dot.addEventListener("click", () => showImage(index));
+        });
+
+        // Function to update the displayed image, dots, and description
+        function showImage(index) {
+            images[currentIndex].classList.remove("active");
+            dots[currentIndex].classList.remove("active-dot");
+
+            currentIndex = (index + images.length) % images.length;
+
+            images[currentIndex].classList.add("active");
+            dots[currentIndex].classList.add("active-dot");
+            description.textContent = images[currentIndex].dataset.desc;
+        }
+    </script>
 </body>
 </html>
